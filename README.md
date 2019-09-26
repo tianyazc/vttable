@@ -13,7 +13,7 @@ vpkg get github.com/tianyazc/vttable
 ```golang
 module main
 
-import table
+import tianyazc.vttable
 fn main() {
     tdata := [
        ["name","source","sex","age"],
@@ -44,7 +44,7 @@ $ v run table_t.v
 ```golang
 module main
 
-import table
+import tianyazc.vttable
 fn main() {
     tdata := [
        ["name","source","sex","age"],
