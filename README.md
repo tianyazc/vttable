@@ -1,20 +1,25 @@
 # Vlang Term Table
 
 ### How to install 
-```vlang
+#### use vpm
+```golang
+v install tianyazc.vttable
+```
+#### use vpkg
+```golang
+vpkg get github.com/tianyazc/vttable
 ```
 ### How to use
-```vlang
+```golang
 module main
- 
-import table
 
-fn maxs() {
+import table
+fn main() {
     tdata := [
-       ["name","sosurdace","2121","d"],
-       ["Meterdasd","8s0","213",""],
-       ["Peter","92dasa","322","qweeeee"],
-       ["Peter","92dasa","322","qweeeee"]
+       ["name","source","sex","age"],
+       ["Meter","80","man",""],
+       ["Peter","92","man","21"],
+       ["xiaoming","86","woman","18"]
    ]
     t := table.Table{
                     data:tdata,
@@ -23,8 +28,44 @@ fn maxs() {
                     }
     t.tables()
 }
+//out
+$ v run table_t.v
++---------+-------+------+----+
+|     name| source|   sex| age|
++---------+-------+------+----+
+|    Meter|     80|   man|    |
++---------+-------+------+----+
+|    Peter|     92|   man|  21|
++---------+-------+------+----+
+| xiaoming|     86| woman|  18|
++---------+-------+------+----+
+```
+---
+```golang
+module main
 
+import table
 fn main() {
-    maxs()
+    tdata := [
+       ["name","source","sex","age"],
+       ["Meter","80","man",""],
+       ["Peter","92","man","21"],
+       ["xiaoming","86","woman","18"]
+   ]
+    t := table.Table{
+                    data:tdata,
+                    // position:"right",
+                    style: "simplicity"
+                    }
+    t.tables()
 }
+//out
+$ v run table_t.v
++---------+-------+------+----+
+|name     |source |sex   |age |
++---------+-------+------+----+
+|Meter    |80     |man   |    |
+|Peter    |92     |man   |21  |
+|xiaoming |86     |woman |18  |
++---------+-------+------+----+
 ```
