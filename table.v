@@ -1,5 +1,5 @@
 // table.v
-module table
+module vttable
 
 import strings
 
