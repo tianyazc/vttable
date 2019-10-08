@@ -13,7 +13,7 @@ vpkg get github.com/tianyazc/vttable
 ```golang
 module main
 
-import tianyazc.vttable
+import tianyazc.vttable as table
 fn main() {
     tdata := [
        ["name","source","sex","age"],
@@ -21,7 +21,7 @@ fn main() {
        ["Peter","92","man","21"],
        ["xiaoming","86","woman","18"]
    ]
-    t := table.Table{
+    t := vttable.Table{
                     data:tdata,
                     position:"right",
                     // style: "simplicity"
