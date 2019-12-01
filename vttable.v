@@ -3,7 +3,7 @@ module vttable
 
 import strings
 
-struct Table {
+pub struct Table {
   pub mut:
     data [][]string
     position string
@@ -42,7 +42,7 @@ pub fn(t Table) tables() {
         // println(t.data)
         mut srowcontent := []string
         // 清空lines
-        lines = []string
+        lines = []
   
         // 打印一行line和一行数据
         // if t.style == "simplicity" {
