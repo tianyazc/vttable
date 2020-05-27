@@ -12,10 +12,10 @@ pub struct Table {
 
 pub fn(t Table) colmax() []int {
     cols := t.data[1].len
-    mut maxs := []int
+    mut maxs := []int{}
     // 获取列字符串的最大长度值
     for j:=0;j<cols;j++ {
-        mut b := []string
+        mut b := []string{}
         for i in t.data {
             b << i[j]
         }
@@ -36,11 +36,11 @@ pub fn version() {
 
 
 pub fn(t Table) tables() {
-    mut lines := []string
+    mut lines := []string{}
     // 渲染表格
     for ri,row in t.data {
         // println(t.data)
-        mut srowcontent := []string
+        mut srowcontent := []string{}
         // 清空lines
         lines = []
   
@@ -133,4 +133,3 @@ fn arraytostr(a []string) string {
     }
     return s
 }
-
